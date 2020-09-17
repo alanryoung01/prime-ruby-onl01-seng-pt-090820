@@ -1,12 +1,12 @@
 def prime?(value)
-chainstart = 2
-if value > 1
-  primes = (start..number-1).to_a
-  primes.none? do |test_number|
-
-    value % test_number == 0
+  if value <= 1 || value == 0 || value == 1
+    return false
+  elsif
+    (2..value - 1).each do |i|
+      if value % i == 0
+        return false
+      end
+    end
   end
-else
-  false
-end
+  true
 end
